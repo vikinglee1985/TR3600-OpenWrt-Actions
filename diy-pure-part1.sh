@@ -157,11 +157,8 @@ apply_fan_patch "$PATCHDIR/0003-luci-tr3600-fan-keep-pending-input.patch" \
 # 想要更簡單的風扇頁就不要把 0008 加回來：它就是複雜度的來源。
 
 # =========================================================
-# iStore 應用商店 feed：2026-10-13 移除
-#   原本這裡會執行：
-#     echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
-#   現在不加這個 feed，config 也一併拿掉 luci-app-store / luci-lib-taskd /
-#   luci-lib-xterm / xz-utils。加了 feed 卻不選套件會多抓一份索引，沒必要。
+# iStore 應用商店 feed：
+echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
 # =========================================================
 
 # =========================================================
